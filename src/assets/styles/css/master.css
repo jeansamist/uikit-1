@@ -66,13 +66,6 @@
     --line-height: 1.5;
     --font-family: "Segoe UI", Roboto, Calibri, Arial, sans-serif;
   }
-  body {
-    font-size: var(--fontSize);
-    line-height: var(--line-height);
-    font-family: var(--font-family);
-    color: var(--color);
-    background: var(--documentBackground);
-  }
   
   * {
     box-sizing: border-box;
@@ -80,6 +73,15 @@
     outline: none;
     margin: 0;
     padding: 0;
+  }
+
+  body {
+    padding: 5em !important;
+    font-size: var(--fontSize);
+    line-height: var(--line-height);
+    font-family: var(--font-family);
+    color: var(--color);
+    background: var(--documentBackground);
   }
   a {
     display: inline-block;
@@ -190,7 +192,7 @@
     border-radius: 1em;
     padding: 0.20em;
     cursor: pointer;
-    transition: background 0.3s ease-out;
+    transition: background 0.3s linear;
   }
   .checkbox > label::before {
     content: '';
@@ -211,6 +213,113 @@
   }
 
   .checkbox.checkbox-disabled {
+    opacity: 0.5;
+  }
+
+
+
+  /** Field Styles **/
+
+  .field.field-small {font-size: var(--body2);}
+  .field.field-big {font-size: var(--h3);}
+
+  .field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    background: var(--backgroundLight);
+    justify-content: center;
+    transition: border 0.3s ease-out;
+    position: relative;
+  }
+  .field > .field-icon {
+    width: 3em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--colorInfo);
+    transition: color 0.3s ease-out;
+  }
+  .field > .input-container {
+    position: relative;
+    width: 100%;
+  }
+  .field > .input-container > label {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: var(--colorInfo);
+    pointer-events: none;
+    transition: transform 0.3s ease-out, font-size 0.3s ease-out, color 0.3s ease-out;
+  }
+  .field > .input-container > label.no-left {
+    left: calc(var(--baseSize) * 1.5);
+  }
+  .field > .input-container > input {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: calc(var(--baseSize) * 0.5) 0;
+    transition: color 0.3s ease-out;
+  }
+  .field.active {
+    border: 1px solid var(--color);
+  }
+  .field.active {
+    border: 1px solid var(--primary);
+  }
+  .field.active > .field-icon {
+    color: var(--primary);
+  }
+  .field.active > .input-container > label {
+    transform: translateY(-200%);
+    color: var(--primary);
+    font-size: var(--body2);
+  }
+  .field.active.field-big >.input-container > label {
+    font-size: var(--body1);
+  }
+  .field.active.field-small >.input-container > label {
+    font-size: var(--body3);
+  }
+  .field.valid > .input-container > input {
+    color: var(--primary);
+  }
+  .field.field-error {
+    border: 1px solid var(--red);
+  }
+  .field.field-error > .field-icon {
+    color: var(--red);
+  }
+  .field.field-error > .input-container > label {
+    color: var(--red);
+    font-weight: bold;
+  }
+  .field.field-error > .input-container > input {
+    color: var(--red);
+    font-weight: bold;
+  }
+  .field.field-error > .field-error-text {
+    color: var(--red);
+    position: absolute;
+    font-size: var(--body2);
+    pointer-events: none;
+    left: 0;
+    bottom: 0;
+    font-style: italic;
+    transform: translate(1.5em, 1.25em);
+  }
+  .field.field-error.field-big > .field-error-text {
+    font-size: var(--body1);
+  }
+  .field.field-error.field-small > .field-error-text {
+    font-size: var(--body3);
+  }
+  .field.field-disabled {
     opacity: 0.5;
   }
 }
@@ -327,5 +436,11 @@
   .lh-0 {
     line-height: 1;
     /* vertical-align: middle; */
+  }
+  .pr-3 {
+    padding-right: 1.5em;
+  }
+  .pl-3 {
+    padding-left: 1.5em;
   }
 }

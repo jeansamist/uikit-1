@@ -1,5 +1,4 @@
 import Button from "../Button";
-import { FiUser, FiArrowRight } from 'react-icons/fi'
 
 export default {
   title: 'Atoms/Buttons',
