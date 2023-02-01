@@ -7,7 +7,7 @@ export default {
 
 const Template = (args) => <Button {...args} />;
 
-export const Default = Template.bind({});
+export const Default = Template;
 Default.args = {
   label: 'Button',
 };

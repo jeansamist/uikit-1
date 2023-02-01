@@ -220,8 +220,6 @@
 
   /** Field Styles **/
 
-  .field.field-small {font-size: var(--body2);}
-  .field.field-big {font-size: var(--h3);}
 
   .field {
     display: flex;
@@ -265,9 +263,6 @@
     width: 100%;
     padding: calc(var(--baseSize) * 0.5) 0;
     transition: color 0.3s ease-out;
-  }
-  .field.active {
-    border: 1px solid var(--color);
   }
   .field.active {
     border: 1px solid var(--primary);
@@ -322,6 +317,43 @@
   .field.field-disabled {
     opacity: 0.5;
   }
+  .field.field-small {font-size: var(--body2);}
+  .field.field-big {font-size: var(--h3);}
+
+
+  /* Input Styles */
+  .input {
+    width: 100%;
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    background: var(--backgroundLight);
+    padding: calc(var(--baseSize) * 0.5) 1.5em;
+    transition: border 0.3s ease-out, color 0.3s ease-out;
+  }
+  .input::placeholder {
+    color: var(--colorInfo);
+  }
+
+  .input.active {
+    border: 1px solid var(--primary);
+  }
+  .input.valid {
+    color: var(--primary);
+  }
+  .input.input-error {
+    border: 1px solid var(--red);
+    color: var(--red);
+    font-weight: bold;
+  }
+  .input.input-error::placeholder {
+    color: var(--red);
+    opacity: 0.7;
+  }
+  .input.input-disabled {
+    opacity: 0.5;
+  }
+  .input.input-small {font-size: var(--body2);}
+  .input.input-big {font-size: var(--h3);}
 }
 
 @layer utilities {
