@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 
 /**
  * Primary UI component for user interaction
@@ -51,41 +51,41 @@ Input.propTypes = {
   /**
    * Type of input
    */
-  type: propTypes.string,
+  type: PropTypes.string,
   /**
    * Input size
    */
-  size: propTypes.oneOf(['small', 'medium', 'big']),
+  size: PropTypes.oneOf(['small', 'medium', 'big']),
   /**
    * The input text placehoder
    */
-  label: propTypes.string,
+  label: PropTypes.string,
   /**
    * Input validity
    */
-  valid: propTypes.bool,
+  valid: PropTypes.bool,
   /**
    * Input state
    */
-  activated: propTypes.bool,
+  activated: PropTypes.bool,
   /**
    * Input Status
    */
-  disabled: propTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * Input default value
    */
-  defaultValue: propTypes.string,
+  defaultValue: PropTypes.string,
   /**
    * Input action on change
    */
-  onChange: propTypes.func,
+  onChange: PropTypes.func,
   /**
    * Input classes
    */
-  className: propTypes.string,
+  className: PropTypes.string,
   /**
    * Input error
    */
-  error: propTypes.bool
+  error: PropTypes.bool
 }

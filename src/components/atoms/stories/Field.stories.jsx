@@ -1,5 +1,6 @@
 import Field from "../Field";
 import { FiUser, FiArrowDown } from 'react-icons/fi'
+import { faker } from '@faker-js/faker'
 export default {
   title: 'Atoms/Fields',
   component: Field
@@ -13,7 +14,7 @@ Disabled.args = {
 };
 export const Error = Template.bind({});
 Error.args = {
-  error: 'We had an error !'
+  error: faker.lorem.sentence(5)
 };
 export const IconLeft = Template.bind({});
 IconLeft.args = {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 /**
  * Primary UI component for user interaction
  * 
@@ -59,49 +59,49 @@ Field.propTypes = {
   /**
    * Type of input
    */
-  type: propTypes.string,
+  type: PropTypes.string,
   /**
    * The Icon at left
    */
-  leftIcon: propTypes.node,
+  leftIcon: PropTypes.node,
   /**
    * The Icon at right
    */
-  rightIcon: propTypes.node,
+  rightIcon: PropTypes.node,
   /**
    * Field size
    */
-  size: propTypes.oneOf(['small', 'medium', 'big']),
+  size: PropTypes.oneOf(['small', 'medium', 'big']),
   /**
    * The field text label
    */
-  label: propTypes.string,
+  label: PropTypes.string,
   /**
    * Input validity
    */
-  valid: propTypes.bool,
+  valid: PropTypes.bool,
   /**
    * Field state
    */
-  activated: propTypes.bool,
+  activated: PropTypes.bool,
   /**
    * Field Status
    */
-  disabled: propTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * Input default value
    */
-  defaultValue: propTypes.string,
+  defaultValue: PropTypes.string,
   /**
    * Input action on change
    */
-  onChange: propTypes.func,
+  onChange: PropTypes.func,
   /**
    * Field classes
    */
-  className: propTypes.string,
+  className: PropTypes.string,
   /**
    * Field error
    */
-  error: propTypes.string
+  error: PropTypes.string
 }

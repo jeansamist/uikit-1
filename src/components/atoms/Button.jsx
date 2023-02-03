@@ -1,5 +1,5 @@
 import React from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 /**
  * Primary UI component for user interaction
  * 
@@ -39,37 +39,37 @@ Button.propTypes = {
   /**
    * Types of button
    */
-  type: propTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'danger']),
+  type: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'danger']),
   /**
    * The Icon at left
    */
-  leftIcon: propTypes.node,
+  leftIcon: PropTypes.node,
   /**
    * The Icon at right
    */
-  rightIcon: propTypes.node,
+  rightIcon: PropTypes.node,
   /**
    * Button size
    */
-  size: propTypes.oneOf(['small', 'medium', 'big', 'large']),
+  size: PropTypes.oneOf(['small', 'medium', 'big', 'large']),
   /**
    * The button text label
    */
-  label: propTypes.string,
+  label: PropTypes.string,
   /**
    * Button Children
    */
-  children: propTypes.node,
+  children: PropTypes.node,
   /**
    * Button Status
    */
-  disabled: propTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * Button action on click
    */
-  onClick: propTypes.func,
+  onClick: PropTypes.func,
   /**
    * Button classes
    */
-  className: propTypes.string
+  className: PropTypes.string
 }

@@ -321,6 +321,100 @@
   .field.field-big {font-size: var(--h3);}
 
 
+
+
+  /* Selects Styles */
+  .select {
+    border: 1px solid var(--border);
+    border-radius: var(--borderRadius);
+    transition: border-color 0.3s linear;
+    background: var(--backgroundLight);
+    border-radius: var(--borderRadius);
+    position: relative;
+  }
+
+  .select>.line>.label {
+    position: absolute;
+    top: 0.5em;
+    left: 1.5em;
+    color: inherit;
+    color: transparent;
+    transition: all 0.3s linear;
+    pointer-events: none;
+    opacity: 0;
+  }
+
+  .select.active>.line>.label {
+    font-size: var(--body2);
+    color: var(--primary);
+    top: -1.5em;
+    left: 1.5em;
+    /* padding: 0 0.5em; */
+    opacity: 1;
+  }
+
+  .select>.line {
+    padding: 0.5em 1.5em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+  }
+
+  .select>.line>.ico {
+    transform: translateY(2px);
+  }
+
+  .select.active>.line>.ico {
+    color: var(--primary);
+  }
+
+  .select.active {
+    border-color: var(--primary);
+  }
+
+  .select>.options {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(calc(100% + 0.5em)) !important;
+    max-width: 400px;
+    width: 100%;
+    background: var(--backgroundLight);
+    border: 1px solid var(--border);
+    border: 1px solid var(--primary);
+    border-radius: var(--borderRadius);
+    box-shadow: 0 1px 4px var(--shadow);
+    min-height: 2.8125em;
+    max-height: 8.4375em;
+    overflow: auto;
+    z-index: 3;
+  }
+
+  .select.select-search>.options {
+    min-height: calc(3em * 2);
+    max-height: calc(8.4375em * 2);
+  }
+
+  .select>.options>input {
+    padding: 0.5em 1em;
+    width: calc(100% - 1em);
+    margin-top: 0.5em;
+    border: 1px solid var(--border);
+    transform: translateX(0.5em);
+    border-radius: var(--borderRadius);
+  }
+
+  .select>.options>.option {
+    padding: 0.5em 1em;
+    border-bottom: 1px solid var(--border);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+
+  .select>.options>.option:hover {
+    box-shadow: 0px 2px 2px var(--primaryOpact);
+  }
+
   /* Input Styles */
   .input {
     width: 100%;
@@ -354,18 +448,107 @@
   }
   .input.input-small {font-size: var(--body2);}
   .input.input-big {font-size: var(--h3);}
+
+
+  
+
+  /* Radio style */
+
+  input[type=radio] {
+    display: none;
+  }
+
+  .radio.radio-small {
+    font-size: var(--body2);
+  }
+  .radio.radio-big {
+    font-size: var(--h3);
+  }
+
+  .radio > label {
+    display: inline-block;
+    width: 1.25em;
+    height: 1.25em;
+    border: 1px solid var(--disabledBackground);
+    background: var(--backgroundLight);
+    border-radius: 50%;
+    padding: 0.125em;
+    cursor: pointer;
+    transition: border 0.3s linear;
+  }
+  .radio > label::before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: var(--disabledBackground);
+    border-radius: 50%;
+    transition: background 0.3s ease-out;
+  }
+  .radio>input[type=radio]:checked~label {
+    border: 1px solid var(--primary);
+  }
+
+  .radio>input[type=radio]:checked~label::before {
+    background: var(--primary);
+  }
+
+  .radio.radio-disabled {
+    opacity: 0.5;
+  }
+
+
+  /* Boxes Styles */
+
+  .box.box-padding {
+    padding: 1.5em;
+  }
+  .box.box-radius {
+    border-radius: var(--borderRadius);
+  }
+  .box.box-border {
+    border: 1px solid var(--border);
+  }
+
+  /* Avatar Styles */
+  .avatar {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+  }
+  .avatar > img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  .avatar.avatar-small {
+    font-size: var(--body2);
+  }
+  .avatar.avatar-big {
+    font-size: var(--h3);
+  }
+  .avatar.avatar-large {
+    font-size: var(--h1);
+  }
+  .avatar.avatar-hyperlarge {
+    font-size: 4em;
+  }
+  .avatar.avatar-disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
 }
 
 @layer utilities {
   ::-webkit-scrollbar {
     width: 7px;
     background: transparent;
-    /* border-radius: 20px; */
   }
 
   ::-webkit-scrollbar-thumb {
     width: 7px;
-    /* border-radius: 20px; */
+    border-radius: 20px;
     background: var(--border);
   }
 

@@ -1,5 +1,5 @@
 import Button from "../Button";
-
+import { faker } from '@faker-js/faker'
 export default {
   title: 'Atoms/Buttons',
   component: Button
@@ -9,30 +9,30 @@ const Template = (args) => <Button {...args} />;
 
 export const Default = Template;
 Default.args = {
-  label: 'Button',
+  label: faker.lorem.word(),
 };
 export const Disabled = Template.bind({});
 Disabled.args = {
-  label: 'Button',
+  label: faker.lorem.word(),
   disabled: true
 };
 export const Small = Template.bind({});
 Small.args = {
   size: 'small',
-  label: 'Button',
+  label: faker.lorem.word(),
 };
 export const Medium = Template.bind({});
 Medium.args = {
   size: 'medium',
-  label: 'Button',
+  label: faker.lorem.word(),
 };
 export const Big = Template.bind({});
 Big.args = {
   size: 'big',
-  label: 'Button',
+  label: faker.lorem.word(),
 };
 export const Large = Template.bind({});
 Large.args = {
   size: 'large',
-  label: 'Button',
+  label: faker.lorem.word(),
 };

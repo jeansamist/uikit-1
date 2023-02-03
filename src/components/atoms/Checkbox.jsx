@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import propTypes from 'prop-types'
+import PropTypes from 'prop-types'
 /**
  * Toggelable checkboxes
  * 
@@ -35,25 +35,25 @@ Checkbox.propTypes = {
   /**
    * Checkbox Id
    */
-  id: propTypes.number,
+  id: PropTypes.number,
   /**
    * Checkbox size
    */
-  size: propTypes.oneOf(['small', 'medium', 'big']),
+  size: PropTypes.oneOf(['small', 'medium', 'big']),
   /**
    * Checkbox Status
    */
-  actived: propTypes.bool,
+  actived: PropTypes.bool,
   /**
    * Checkbox Status
    */
-  disabled: propTypes.bool,
+  disabled: PropTypes.bool,
   /**
    * Checkbox action on click
    */
-  onChange: propTypes.func,
+  onChange: PropTypes.func,
   /**
    * Checkbox classes
    */
-  className: propTypes.string
+  className: PropTypes.string
 }
