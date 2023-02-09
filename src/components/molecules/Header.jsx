@@ -23,13 +23,13 @@ export class Brand {
 function Header({ children, border = false, className = "", brand = new Brand(), dark = false }) {
   const brandRend =
     brand.type === "text" ? (
-      <div className="header-brand header-brand-text">
+      <div className="header-brand header-brand-text" onClick={brand.onClick}>
         <Heading underline={brand.underlined} type="4">
           {brand.content}
         </Heading>
       </div>
     ) : (
-      <div className="header-brand header-brand-image">
+      <div className="header-brand header-brand-image" onClick={brand.onClick}>
         <img style={{ width: brand.width }} src={brand.content} alt="brand" />
       </div>
     );
