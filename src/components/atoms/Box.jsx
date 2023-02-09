@@ -1,21 +1,25 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react";
+import PropTypes from "prop-types";
 /**
  * Boxes
- * 
+ *
  * ## Usage
- * 
+ *
  * ```jsx
- * 
+ *
  * <Box>Content</Box>
- * 
+ *
  * ```
  */
 
-export default function Box({ children = null, padding = false, radius = false, border = false, backgroundImage = '', className = '' }) {
-
+export default function Box({ children = null, padding = false, radius = false, border = false, backgroundImage = "", className = "" }) {
   return (
-    <div className={`box${border ? ' box-border' : ''}${radius ? ' box-radius' : ''}${padding ? ' box-padding' : ''}${className ? ` ${className}` : ''}`} style={{ background: backgroundImage ? 'url("' + backgroundImage + '") no-repeat center / cover' : 'var(--backgroundLight)' }}>
+    <div
+      className={`box${border ? " box-border" : ""}${radius ? " box-radius" : ""}${padding ? " box-padding" : ""}${className ? ` ${className}` : ""}`}
+      style={{
+        background: backgroundImage ? 'url("' + backgroundImage + '") no-repeat center / cover' : "var(--backgroundLight)",
+      }}
+    >
       <div className="box-content">{children}</div>
     </div>
   );
@@ -46,4 +50,4 @@ Box.propTypes = {
    * Box classes
    */
   className: PropTypes.string,
-}
+};

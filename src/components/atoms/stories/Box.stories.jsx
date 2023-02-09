@@ -4,7 +4,7 @@ export default {
   title: 'Atoms/Boxes',
   component: Box
 }
-const Template = (args) => <Box {...args}> {faker.lorem.paragraphs(3)}</Box>;
+const Template = (args) => <Box {...args}>{faker.lorem.paragraphs(3)}</Box>;
 
 export const Default = Template;
 export const Padding = Template.bind({});
