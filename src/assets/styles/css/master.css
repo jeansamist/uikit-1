@@ -754,7 +754,7 @@ utilities;
 
   /* Footer styles */
   .footer {
-    background: var(--greyVariant);
+    background: var(--backgroundLight);
     padding: 1.5em;
     box-shadow: 0 -0.5em 1em var(--shadow);
   }
@@ -765,9 +765,14 @@ utilities;
 
   /* Header styles */
   .header {
-    background: var(--greyVariant);
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--backgroundLight);
     padding: 1.5em;
-    box-shadow: 0 0.5em 1em var(--shadow);
+    box-shadow: 0 0.5em 1em var(--shadow),
+      -0.5em 0 1em var(--shadow);
   }
 
   .header.header-border {
@@ -909,6 +914,19 @@ utilities;
     width: 25px;
     height: 25px;
     border-radius: 50%;
+  }
+
+  /* Card styles */
+  .box.card {
+    position: relative;
+  }
+
+  .box.card.card-radius {
+    overflow: hidden;
+  }
+
+  .box.card.card-shadow {
+    box-shadow: 0 1em 2em var(--shadow);
   }
 }
 
