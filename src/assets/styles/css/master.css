@@ -53,10 +53,16 @@ utilities;
     --greyVariant: #eef0f3;
     --red: #f25353;
     --redVariant: #db4b4b;
+    --redOpact: #f253534b;
+    --redVariantOpact: #db4b4b46;
     --green: #41cf7c;
     --greenVariant: #2fb165;
+    --greenOpact: #41cf7c50;
+    --greenVariantOpact: #2fb16544;
     --yellow: #feb32b;
     --yellowVariant: #da981e;
+    --yellowOpact: #feb42b48;
+    --yellowVariantOpact: #da981e44;
     --baseSize: 16px;
     --fontSize: var(--baseSize);
     --h1: calc(var(--baseSize) * 2.5);
@@ -93,6 +99,7 @@ utilities;
     font-family: var(--font-family);
     color: var(--color);
     background: var(--documentBackground);
+    min-height: 100vh;
   }
 
   a {
@@ -991,18 +998,6 @@ utilities;
     margin-top: 0 !important;
   }
 
-  /* .sidebar>.sidebar-content>.sidebar-links>.category-name::after {
-    content: '';
-    position: absolute;
-    width: calc(100% - 2em);
-    bottom: 0;
-    left: 50%;
-    height: 1px;
-    background: var(--colorInfo);
-    opacity: 0.7;
-    transform: translateY(0.5em) translateX(-50%);
-  } */
-
   .sidebar .menu-btn {
     cursor: pointer;
   }
@@ -1043,18 +1038,57 @@ utilities;
     font-weight: bold;
   }
 
-  /* .sidebar>.sidebar-content>.sidebar-links>.sidebar-link {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    padding: 0.75em 1em;
-    cursor: pointer;
-    color: var(--color-info-2);
-    position: relative;
-    margin-bottom: 0.5em;
-    transition: color 0.3s linear;
-  } */
+  /* Toast styles */
+  .toast {
+    position: fixed !important;
+    min-width: calc(var(--sidebarWidth) * 1.75);
+    font-size: var(--body2);
+    /* padding-bottom: 2em; */
+    overflow: hidden;
+    font-weight: bold;
+    transform: translateX(-100%) translateY(0%);
 
+  }
+
+  .toast.toast-success {
+    --primary: var(--green);
+    --primaryOpact: var(--greenOpact);
+    --primaryVariant1Opact: var(--greenVariantOpact);
+  }
+
+  .toast.toast-warning {
+    --primary: var(--yellow);
+    --primaryOpact: var(--yellowOpact);
+    --primaryVariant1Opact: var(--yellowVariantOpact);
+  }
+
+  .toast.toast-danger {
+    --primary: var(--red);
+    --primaryOpact: var(--redOpact);
+    --primaryVariant1Opact: var(--redVariantOpact);
+  }
+
+  .toast::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 5em;
+    transform: translateX(50%) translateY(50%);
+    box-shadow: 0 0 0 0.75em var(--primaryOpact),
+      0 0 0 1.5em var(--primaryVariant1Opact);
+    border-radius: 50%;
+    height: 5em;
+    background: var(--primary);
+  }
+
+  .toast .toast-icon {
+    width: 1.5em;
+    height: 1.5em;
+    /* transform: translateY(0.1em); */
+    border-radius: 50%;
+    background: var(--primary);
+  }
 }
 
 @layer utilities {
