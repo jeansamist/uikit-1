@@ -20,7 +20,7 @@ export const COLORS = {
   disabledBackground: "#b8b8ba",
   cardBackground: "#fff",
   inputBackground: "#fff",
-  border: "#b8b8ba",
+  border: "#e1e1ee",
   shadow: "#f2f0ff",
   greyVariant: "#eef0f3",
   red: "#f25353",
