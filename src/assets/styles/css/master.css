@@ -1089,6 +1089,43 @@ utilities;
     border-radius: 50%;
     background: var(--primary);
   }
+
+  /* DataCards styles */
+  .data-card {
+    position: relative;
+  }
+
+  .data-card.data-card-dark {
+    color: var(--colorLight);
+    --backgroundLight: var(--backgroundDark) url('./../../images/oooscillate.svg') no-repeat center / cover;
+  }
+
+  .data-card.data-card-light {
+    color: var(--color);
+    --backgroundLight: #fff url('./../../images/oooscillate.svg') no-repeat center / cover;
+    position: relative;
+  }
+
+  .data-card .data-card-icon {
+    padding: 1em;
+    border-radius: var(--borderRadius);
+    backdrop-filter: blur(1em);
+  }
+
+  .data-card.data-card-light .data-card-icon {
+    color: var(--color);
+    background: var(--primaryOpact);
+  }
+
+  .data-card.data-card-dark .data-card-icon {
+    color: var(--colorLight);
+    background: #ffffff60;
+  }
+
+  /* .data-card .data-card-data-value {
+    font-size: var(--h3);
+    margin-top: 1em;
+  } */
 }
 
 @layer utilities {
