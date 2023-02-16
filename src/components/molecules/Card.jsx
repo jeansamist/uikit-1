@@ -11,12 +11,14 @@ function Card({
   header = null,
   footer = null,
   heading = null,
+  onClick = () => {},
   className = "",
 }) {
   return (
     <Box
       radius={radius}
       border={border}
+      onClick={onClick}
       className={`card${border ? " card-border" : ""}${shadow ? " card-shadow" : ""}${radius ? " card-radius" : ""}${padding ? " card-padding" : ""}${
         className ? ` ${className}` : ""
       }`}

@@ -30,9 +30,8 @@ function Toast({ children, type = "primary", className = "", onClick = () => {},
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}
           animate={{ x: "0em", opacity: 1 }}
-          exit={{ x: "-100%", opacity: 0 }}
+          exit={{ x: "100%", opacity: 0 }}
           onClick={(e) => onClick(e)}
-          style={{ position: "fixed", top: "1em", right: "1em" }}
           onHoverStart={onHover}
           onHoverEnd={onLeave}
         >

@@ -12,9 +12,18 @@ import PropTypes from "prop-types";
  * ```
  */
 
-export default function Box({ children = null, padding = false, radius = false, border = false, backgroundImage = "", className = "" }) {
+export default function Box({
+  children = null,
+  padding = false,
+  radius = false,
+  border = false,
+  backgroundImage = "",
+  onClick = () => {},
+  className = "",
+}) {
   return (
     <div
+      onClick={onClick}
       className={`box${border ? " box-border" : ""}${radius ? " box-radius" : ""}${padding ? " box-padding" : ""}${className ? ` ${className}` : ""}`}
       style={{
         background: backgroundImage ? 'url("' + backgroundImage + '") no-repeat center / cover' : "var(--backgroundLight)",

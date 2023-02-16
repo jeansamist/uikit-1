@@ -1,6 +1,7 @@
 @layer global,
 theme,
-utilities;
+utilities,
+responsive;
 
 @font-face {
   font-family: 'Segoe UI';
@@ -100,6 +101,7 @@ utilities;
     color: var(--color);
     background: var(--documentBackground);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   a {
@@ -1046,7 +1048,7 @@ utilities;
     /* padding-bottom: 2em; */
     overflow: hidden;
     font-weight: bold;
-    transform: translateX(-100%) translateY(0%);
+    /* transform: translateX(-100%) translateY(0%); */
 
   }
 
@@ -1122,6 +1124,32 @@ utilities;
     background: #ffffff60;
   }
 
+  /* Alerts styles */
+  .alert {
+    --backgroundLight: linear-gradient(-45deg, var(--primary), var(--primaryVariant1));
+    color: var(--colorLight);
+    width: calc(var(--sidebarWidth) * 2);
+  }
+
+  .alert.alert-success {
+    --backgroundLight: linear-gradient(-45deg, var(--green), var(--greenVariant));
+  }
+
+  .alert.alert-warning {
+    --backgroundLight: linear-gradient(-45deg, var(--yellow), var(--yellowVariant));
+  }
+
+  .alert.alert-danger {
+    --backgroundLight: linear-gradient(-45deg, var(--red), var(--redVariant));
+  }
+
+  .alert .close {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    cursor: pointer;
+  }
+
   /* .data-card .data-card-data-value {
     font-size: var(--h3);
     margin-top: 1em;
@@ -1171,6 +1199,10 @@ utilities;
 
   .flex.jcsa {
     justify-content: space-around;
+  }
+
+  .flex.jcfe {
+    justify-content: flex-end;
   }
 
   .flex.fdc {
@@ -1228,5 +1260,23 @@ utilities;
 
   .pl-3 {
     padding-left: 1.5em;
+  }
+}
+
+@layer responsive {
+  @media (max-width: 1275px) {
+    .grid.grid-4 {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  @media (max-width: 675px) {
+    .grid.grid-4 {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .grid.grid-2 {
+      grid-template-columns: repeat(1, 1fr) !important;
+    }
   }
 }
