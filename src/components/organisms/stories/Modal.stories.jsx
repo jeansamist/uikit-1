@@ -7,7 +7,7 @@ export default {
 };
 
 const Template = (args) => {
-  const [isOpen, setisOpen] = useState(true);
+  const [isOpen, setisOpen] = useState(false);
   return (
     <>
       <Button onClick={() => setisOpen(true)}>Open Modal</Button>
